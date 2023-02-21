@@ -1,7 +1,7 @@
 %-------------------------
 % Rezume, a latex resume template for developers
 % Author : Md Eftakhairul Islam
-% Based off of: https://github.com/eftakhairul
+% Based off of: https://github.com/eftakhairul/resume
 % License : MIT
 
 % Hope this resume template helps you land an awesome job. If you found this helpful, please consider starring the github repo here, .
@@ -190,7 +190,7 @@
   \resumeHeadingListStart{}
     \resumeSectionType{Languages}{:}{Golang, Node.js, Ruby, PHP, Java}
     \resumeSectionType{In-memory}{:}{Redis, Memcached}
-    \resumeSectionType{Databases}{:}{MySQL, PostgreSQL, Oracle DB, MongoDB, OrientDB, Neo4j}
+    \resumeSectionType{Databases}{:}{MySQL, PostgreSQL, Oracle DB, MongoDB, Elasticsearch, OrientDB}
     \resumeSectionType{Ops}{:}{Kubernates, Nomad, Kafka, Terraform, Ansible, Puppet, Packer, AWS Cloud, GCP}
   \resumeHeadingListEnd{}
 %--------------------------------------------
@@ -201,24 +201,39 @@
 
 \section{Experience}
 \resumeHeadingListStart{}
-  \resumeQuadHeading{Web Developer}{Apr 2022 -- Present}
-  {Anycompany}{Remote -- AnyCity, Anystate, Anycountry}
+  \resumeQuadHeading{Senior Software Developer}{January 2021 -- Present}
+  {Unity Technologies}{Montreal, Canada}
     \resumeItemListStart{}
-      \resumeItem{Designed and developed dynamic and responsive websites using \textbf{HTML, CSS, JavaScript, and PHP}}
-      \resumeItem{Worked with \textbf{REST APIs} to retrieve and display data from databases}
-      \resumeItem{Improved \textbf{website performance} and speed through optimization techniques by \textbf{55\%}}
+      \resumeItem{Designed, developed, and documented Core Cloud Apps of Multiplayer Game Hosting}
+      \resumeItem{Designed and deployed in-house end-to-end logging solution for Multiplayer Game Hosting }
+      \resumeItem{Automated various Ops issues in Bare Metal Machines}
     \resumeItemListEnd{}
 
-  \resumeQuadHeading{Backend Developer}{Aug 2021 -- Nov 2022}
-  {Anycompany}{Anycity, Anystate, Anycountry}
+  \resumeQuadHeading{Software Engineer}{Oct 2017 -- Jan 2021}
+  {Index Exchanges}{Montreal, Canada}
     \resumeItemListStart{}
-      \resumeItem{Worked with \textbf{MVC frameworks} to develop robust and scalable backends}
-      \resumeItem{Troubleshot and \textbf{fixed bugs} and issues in the backend to ensure \textbf{smooth operation} of the applications}
+      \resumeItem{Responsible for the enhancement of the Bidding platform based on OpenRTB  }
+      \resumeItem{Participate in weekly release hardening and deployment process }
     \resumeItemListEnd{}
 
-  \resumeQuadHeadingChild{Backend Developer Intern}{Jan 2021 -- Aug 2021}
+  \resumeQuadHeading{Team Lead \& Software Developer}{Jul 2016 -- Oct 2017}
+  {Payment Rails Inc. known as Trolley}{Montreal, Canada}
     \resumeItemListStart{}
-      \resumeItem{Assisted senior web developers in the design and development of websites using \textbf{HTML, CSS, and JavaScript}}
+      \resumeItem{Designed, Developed \& maintained the Core API platform }
+      \resumeItem{Automated CI/CD pipeline on AWS}
+    \resumeItemListEnd{}
+\resumeQuadHeading{Senior Software Developer}{Aug 2015 -- May 2016}
+  {Executable Design Inc.}{Montreal, Canada}
+    \resumeItemListStart{}
+      \resumeItem{Lead the team and establish the technical direction for the project}
+      \resumeItem{Analysis, design and architect the development of application}
+    \resumeItemListEnd{}
+\resumeQuadHeading{Software Developer}{Aug 2014 -- Jun 2015}
+  {IOU Finance Inc.}{Montreal, Canada}
+    \resumeItemListStart{}
+      \resumeItem{Implemented new and enhanced feature with automated test code}
+      \resumeItem{Maintain and fix bugs of existing code base}
+      \resumeItem{Take care of deployment based on Docker on top of Cloud Infrastructures}
     \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 %---------------------------------------------
@@ -236,37 +251,15 @@
   \resumeHeadingListEnd{}
 %---------------------------------------------
 
-
-%-----------PROJECTS--------------------------
-% Use resumeQuadHeading if four elements are feasible (ex: demo video link), else use resumeTrioHeading. Keep the bullet points simple and concise and try to cover wide variety of skills you have used to build these projects
-
-\section{Projects}
-  \resumeHeadingListStart{}
-    \resumeTrioHeading{\href{https://project1.com}{\uline{Project 1}}}{React.js, Redux, PHP, MySQL Git}{\href{https://proect1.com/source-code/}{\uline{Source Code}}}
-      \resumeItemListStart{}
-        \resumeItem{Designed and developed a clean and modern website using \textbf{HTML, CSS, and JavaScript}}
-        \resumeItem{Optimized website for \textbf{speed and user experience}}
-        \resumeItem{Utilized \textbf{responsive design} to ensure compatibility across all devices}
-        \resumeItem{Deployed on GitHub pages via GitHub Actions}
-      \resumeItemListEnd{}
-
-      \resumeTrioHeading{Project 2}{Node.js, Express, JavaScript, Git}{\href{https:project2.com/source-code}{\uline{Source Code}}}
-      \resumeItemListStart{}
-        \resumeItem{A \textbf{CRUD application} exposed using a RESTful API made with Node.js}
-        \resumeItem{Exposed POST, GET, PATCH and DELETE HTTP methods using \textbf{Express}}
-      \resumeItemListEnd{}
-  \resumeHeadingListEnd{}
-%--------------------------------------------
-
-
 %----------------OTHERS----------------------
-% You can add your acheivements, accolades, certifications etc. here.
+% You can add your achievements, accolades, certifications etc. here.
 
-\section{Certifications}
+\section{Invited Talks and Workshops}
   \resumeItemListStart{}
-    \resumeItem{\href{https://dummy-certification.com}{\uline{Certified Web Developer by the W3C}}}
-    \resumeItem{\href{https://dummy-certification.com}{\uline{Microsoft Certified: Azure Developer Associate}}}
-    \resumeItem{\href{https://dummy-certification.com}{\uline{AWS Certified Developer - Associate}}}
+    \resumeItem{Introduction to Git - Fall Workshop 2015, District 3, Concordia University}
+    \resumeItem{RESTful Web Services - phpXperts Seminar 2011, Dhaka, Bangladesh}
+    \resumeItem{Facebook App Development - Fall Workshop - 2011, BRAC University}
+    \resumeItem{Introduction to Linux - Spring Workshop - 2011, BRAC University}
   \resumeItemListEnd{}
 %--------------------------------------------
 
