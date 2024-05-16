@@ -33,6 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
         with:
+          allowUpdates: true
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./eftakhairul_resumne.pdf
           asset_name: eftakhairul_resumne.pdf
