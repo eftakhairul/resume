@@ -23,7 +23,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          name: Release ${{ github.ref }}
+          name: "Release $env:GITHUB_REF_NAME"
           draft: false
           prerelease: false
 
