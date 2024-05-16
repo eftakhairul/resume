@@ -18,13 +18,12 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
         with:
-          allowUpdates: true
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          name: Release ${{ github.ref }}
           draft: false
           prerelease: false
 
@@ -33,7 +32,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
-        with:         
+        with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./eftakhairul_resumne.pdf
           asset_name: eftakhairul_resumne.pdf
