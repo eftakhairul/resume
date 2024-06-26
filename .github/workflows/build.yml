@@ -14,7 +14,7 @@ jobs:
         with:
           root_file: resume.tex
       - name: Rename file
-        run: mv resume.pdf eftakhairul_resumne.pdf
+        run: mv resume.pdf eftakhairul_resume.pdf
 
       - name: Create Release
         id: create_release
