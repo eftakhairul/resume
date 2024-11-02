@@ -2,7 +2,7 @@
 
 # Release
 This build automatically upon creating a tag.
-Example: 
+Example:
 ```bash
 git tag -a v2.2.2 -m "v2.2.2"
 git push --tags
@@ -10,6 +10,5 @@ git push --tags
 
 # Local Build
 ```bash
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
+dockerlatex.sh pdflatex resume.tex
 ```
