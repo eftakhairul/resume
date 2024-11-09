@@ -1,0 +1,31 @@
+name: Publish
+on: [workflow_call]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Set latest tag"
+        id: set-latest-tag
+        run: echo "latest_tag=$(git tag | sort --version-sort | tail -n1)" >> $GITHUB_ENV
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+        with:
+          tag: ${{ env.latest_tag }}
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+      - name: Rename resume file
+        run: mv resume.pdf eftakhairul_islam_resume.pdf
+
+      - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}  # I didn't want expose the region
+        
+    - name: Upload to S3
+      run: |
+        aws s3 cp ./eftakhairul_islam_resume.pdf s3://${{ secrets.AWS_S3_BUCKET_NAME }}/eftakhairul_islam_resume.pdf
