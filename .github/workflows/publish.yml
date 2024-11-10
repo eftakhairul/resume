@@ -1,17 +1,25 @@
 name: Publish to S3 bucket
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to checkout'
+        required: true
+        type: string
+  push:
+    tags:
+      - 'v*'  # Matches any tag starting with 'v'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Set latest tag
-        id: set-latest-tag
-        run: echo "latest_tag=$(git tag | sort --version-sort | tail -n1)" >> $GITHUB_ENV
-      - name: Set up Git repository
+    # Method 1: Checkout specific tag using ref
+      - name: Checkout specific tag
         uses: actions/checkout@v4
         with:
-          tag: ${{ env.latest_tag }}
+          ref: ${{ inputs.tag || github.ref }}  # Uses input tag or the pushed tag
+          fetch-depth: 0
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
