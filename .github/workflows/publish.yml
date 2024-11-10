@@ -11,7 +11,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
         with:
-          tag: ${{ env.latest_tag }}
+          ref: ${{ env.latest_tag }}
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
