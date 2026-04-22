@@ -21,7 +21,7 @@ jobs:
           ref: ${{ inputs.tag || github.ref }}  # Uses input tag or the pushed tag
           fetch-depth: 0
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: resume.tex
       - name: Rename resume file

@@ -12,7 +12,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v6
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: resume.tex
       - name: Rename file
