@@ -16,7 +16,7 @@ jobs:
     steps:
     # Method 1: Checkout specific tag using ref
       - name: Checkout specific tag
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ inputs.tag || github.ref }}  # Uses input tag or the pushed tag
           fetch-depth: 0
