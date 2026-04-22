@@ -6,9 +6,11 @@ on:
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
@@ -18,7 +20,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.YOUR_SELF_MADE_TOKEN }}
         with:
